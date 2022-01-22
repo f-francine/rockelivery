@@ -1,4 +1,4 @@
-defmodule Rocklivery.Users.Input.Address do
+defmodule Rockelivery.Users.Input.Address do
   use Ecto.Schema
   import Ecto.Changeset
 

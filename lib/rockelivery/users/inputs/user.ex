@@ -2,7 +2,8 @@ defmodule Rockelivery.Users.Inputs.User do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias Rocklivery.Users.Input.Address
+  alias Rockelivery.Repo
+  alias Rockelivery.Users.Input.Address
 
   @primary_key {:id, :binary_id, autogenerate: true}
   @required_fields [
@@ -47,4 +48,6 @@ defmodule Rockelivery.Users.Inputs.User do
 
    put_change(changeset, :password_hash, Pbkdf2.add_hash(password))
   end
+
+  def insert(%__MODULE__{} = schema), do: Repo.insert(schema)
 end
