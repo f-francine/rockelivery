@@ -50,4 +50,5 @@ defmodule Rockelivery.Users.Inputs.User do
   end
 
   def insert(%__MODULE__{} = schema), do: Repo.insert(schema)
+  def update(%__MODULE__{} = schema), do: Repo.update(schema)
 end
